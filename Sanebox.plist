@@ -1,0 +1,31 @@
+{
+	// Move messages into appropriate sane folders
+
+	// Set the flag to green and archive the message (a smart mailbox and rule processes it further into appropriate SaneTomorrow folder)
+	"^1" = ( "setTag:", "\\Flagged", "setTag:", "$MailFlagBit0", "setTag:", "$MailFlagBit1", "removeTag:", "$MailFlagBit2", "archive:");
+
+	// Set the flag to blue and archive the message (a smart mailbox and rule processes it further into appropriate Sane3Days folder)
+	"^2" = ( "setTag:", "\\Flagged", "removeTag:", "$MailFlagBit0", "removeTag:", "$MailFlagBit1", "setTag:", "$MailFlagBit2", "archive:");
+	
+	// Set the flag to purple and archive the message (a smart mailbox and rule processes it further into appropriate SaneSunday folder)
+	"^3" = ( "setTag:", "\\Flagged", "setTag:", "$MailFlagBit0", "removeTag:", "$MailFlagBit1", "setTag:", "$MailFlagBit2", "archive:");
+	
+	// Set the flag to grey and archive the message (a smart mailbox and rule processes it further into appropriate Sane1Week folder)
+	"^4" = ( "setTag:", "\\Flagged", "removeTag:", "$MailFlagBit0", "setTag:", "$MailFlagBit1", "setTag:", "$MailFlagBit2", "archive:");
+	
+	// Train Spam
+	"s" = {
+		"g" = ("moveToMailbox:", "/TrainGood");
+		"s" = ("moveToMailbox:", "/TrainSpam");	
+	};
+	
+	// Go to Mailboxes
+	"g" = {
+		"a" = ( "goToMailbox:", "ALL_MESSAGES" );
+		"s" = ( "goToMailbox:", "5B590ACC-2E72-4A98-840C-9C5BC4686A6A" );
+		"d" = ( "goToMailbox:", "DRAFTS" );
+		"l" = "goToMailbox:";
+		"i" = ( "goToMailbox:", "INBOX" );
+		"t" = ( "goToMailbox:", "SENT" );
+	};
+}
