@@ -20,4 +20,9 @@
 	};
 	
 	"^a" = ("archive:");
+	
+	
+	"0" = ("makeFirstResponder:", "mainOutline"); // move focus to message list 
+	"9" = ("makeFirstResponder:", "messageView"); // move focus to message view (for scrolling with arrows) 
+	"n" = ("makeFirstResponder:", "mainOutline", "nextUnreadMessage:"); // move focus to message list, select next unread message
 }
