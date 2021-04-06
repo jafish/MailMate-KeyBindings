@@ -1,16 +1,16 @@
 {
 	// Move messages into appropriate sane folders
 
-	// Set the flag to green and archive the message (a smart mailbox and rule processes it further into appropriate SaneTonight folder)
+	// Set the flag to green and archive the message (a smart mailbox and rule processes it further into appropriate SaneBox folder - "Delay Level" 1)
 	"^1" = ( "setTag:", "\\Flagged", "setTag:", "$MailFlagBit0", "setTag:", "$MailFlagBit1", "removeTag:", "$MailFlagBit2", "archive:");
 
-	// Set the flag to blue and archive the message (a smart mailbox and rule processes it further into appropriate SaneTomorrow folder)
+	// Set the flag to blue and archive the message (a smart mailbox and rule processes it further into appropriate SaneBox folder - "Delay Level" 2)
 	"^2" = ( "setTag:", "\\Flagged", "removeTag:", "$MailFlagBit0", "removeTag:", "$MailFlagBit1", "setTag:", "$MailFlagBit2", "archive:");
 	
-	// Set the flag to purple and archive the message (a smart mailbox and rule processes it further into appropriate Sane3Days folder)
+	// Set the flag to purple and archive the message (a smart mailbox and rule processes it further into appropriate SaneBox folder - "Delay Level" 3)
 	"^3" = ( "setTag:", "\\Flagged", "setTag:", "$MailFlagBit0", "removeTag:", "$MailFlagBit1", "setTag:", "$MailFlagBit2", "archive:");
 	
-	// Set the flag to grey and archive the message (a smart mailbox and rule processes it further into appropriate SaneNextWeek folder)
+	// Set the flag to gray and archive the message (a smart mailbox and rule processes it further into appropriate SaneBox folder - "Delay Level" 4)
 	"^4" = ( "setTag:", "\\Flagged", "removeTag:", "$MailFlagBit0", "setTag:", "$MailFlagBit1", "setTag:", "$MailFlagBit2", "archive:");
 	
 	// Train Spam
