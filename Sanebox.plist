@@ -13,6 +13,9 @@
 	// Set the flag to gray and archive the message (a smart mailbox and rule processes it further into appropriate SaneBox folder - "Delay Level" 4)
 	"^4" = ( "setTag:", "\\Flagged", "removeTag:", "$MailFlagBit0", "setTag:", "$MailFlagBit1", "setTag:", "$MailFlagBit2", "archive:");
 	
+	// "Return" message to the appropriate inbox
+	"^0" = ( "moveToMailbox:", "inbox" );
+	
 	// Train Spam
 	"s" = {
 		"g" = ("moveToMailbox:", "/TrainGood");
