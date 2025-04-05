@@ -1,5 +1,8 @@
 {
 	// Move messages into appropriate sane folders
+	// Setup Instructions (beyond setting these keybindings in Mailmate...):
+	// 1. In the archive folder for each account, create rules that move the message to the appropriate sanebox "snooze" folder based on the flag color
+	// 2. I think that's it? Current sanebox "snooze" folders are Sane4Hours, SaneTomorrow, Sane3Days, SaneNextWeek
 
 	// Set the flag to green and archive the message (a smart mailbox and rule processes it further into appropriate SaneBox folder - "Delay Level" 1)
 	"^1" = ( "setTag:", "\\Flagged", "setTag:", "$MailFlagBit0", "setTag:", "$MailFlagBit1", "removeTag:", "$MailFlagBit2", "archive:");
